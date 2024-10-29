@@ -1,0 +1,117 @@
+/* styles/Gallery.module.scss */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-color);
+
+  h2 {
+    font-family: 'Inria Sans', sans-serif;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 40px;
+    line-height: 48px; 
+    color: #FFFFFF; 
+    margin: 0 auto 0.5rem; 
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  p {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    padding: 1rem 3.55rem;
+    line-height: 1.3rem;
+    word-spacing: 0.2rem;
+  }
+
+  .imageGrid {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+
+    img {
+      width: 23rem; 
+      height: 23rem; 
+      padding: 10px; 
+      border-radius: 25px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .imageGrid {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .seeMoreButton {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    width: 159px;
+    height: 52px;
+    border: 1px solid #FFFFFF;
+    filter: drop-shadow(0px 4px 31px rgba(0, 0, 0, 0.15));
+    color: #FFFFFF;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: #FFFFFF;
+      color: #000000;
+    }
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin-top: 2rem; 
+  }
+}
+
+
+/* Responsive Media Queries */
+
+/* Small Tablets: max-width 768px */
+@media (max-width: 768px) {
+  .imageGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .imageGrid img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Tablets and Small Laptops: max-width 1024px */
+@media (max-width: 1024px) {
+  .imageGrid img {
+    width: 75%;
+  }
+}
+
+/* Standard Desktop: max-width 1440px */
+@media (max-width: 1440px) {
+  .imageGrid img {
+    width: 23rem;
+  }
+}
+
+/* Large Desktop: max-width 1920px */
+@media (max-width: 1920px) {
+  .imageGrid img {
+    width: 30rem;
+  }
+}

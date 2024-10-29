@@ -1,0 +1,98 @@
+/* styles/Partners.module.scss */
+.partners {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-color);
+  position: relative; 
+  width: 100%; 
+  max-width: 375px; 
+  margin: 0 auto;
+
+  h2 {
+    width: 182px; 
+    height: 48px;
+    font-family: 'Inria Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300; 
+    font-size: 40px;
+    line-height: 48px; 
+    color: #FFFFFF; 
+    margin: 0 auto 0.5rem; 
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  p {
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .logoGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 4rem; 
+    justify-content: center;
+    align-items: center; 
+    margin: 0 auto; 
+    margin-bottom: 2rem;
+    width: 100%; 
+    max-width: 286px; 
+    height: auto; 
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .allPartnersButton {
+    padding: 0.75rem 2rem;
+    background-color: var(--highlight-color);
+    border-radius: 4px;
+    border: 1px solid #FFFFFF;
+    filter: drop-shadow(0px 4px 31px rgba(0, 0, 0, 0.15));
+    color: #FFFFFF; 
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1rem;
+    margin: 0 auto; 
+    display: block; 
+  }
+}
+
+
+
+/* Responsive Media Queries */
+
+/* Small Tablets: max-width 768px */
+@media (max-width: 768px) {
+  .logoGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Tablets and Small Laptops: max-width 1024px */
+@media (max-width: 1024px) {
+  .logoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Standard Desktop: max-width 1440px */
+@media (max-width: 1440px) {
+  .logoGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+
+/* Large Desktop: max-width 1920px */
+@media (max-width: 1920px) {
+  .logoGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
